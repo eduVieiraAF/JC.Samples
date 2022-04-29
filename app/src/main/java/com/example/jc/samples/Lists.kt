@@ -1,4 +1,4 @@
-package com.example.jc.textfield_snackbar
+package com.example.jc.samples
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.layout.Column

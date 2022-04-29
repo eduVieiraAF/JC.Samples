@@ -1,4 +1,4 @@
-package com.example.jc.textfield_snackbar
+package com.example.jc.samples
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
