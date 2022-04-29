@@ -8,6 +8,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
@@ -16,10 +17,9 @@ import com.example.jc.ui.theme.JCTheme
 import kotlinx.coroutines.launch
 
 
-
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
-fun ClickText(){
+fun ClickText() {
     val scaffoldState = rememberScaffoldState()
     var textFieldState by remember { mutableStateOf("") }
     val scope = rememberCoroutineScope()
@@ -49,12 +49,19 @@ fun ClickText(){
 
             Spacer(modifier = Modifier.height(12.dp))
 
-            Button(onClick = {
-                scope.launch {
-                    scaffoldState.snackbarHostState
-                        .showSnackbar("Hello $textFieldState")
-                }
-            }
+            Button(
+                onClick = {
+                    scope.launch {
+                        scaffoldState.snackbarHostState
+                            .showSnackbar("Hello $textFieldState")
+                    }
+                },
+                colors = ButtonDefaults
+                    .buttonColors(
+                        backgroundColor = MaterialTheme.colors.error,
+                        contentColor = Color.White
+                    )
+
             ) {
                 Text("Click me")
             }
@@ -64,7 +71,7 @@ fun ClickText(){
 
 @Preview
 @Composable
-fun Show(){
+fun Show() {
     JCTheme {
         ClickText()
     }
