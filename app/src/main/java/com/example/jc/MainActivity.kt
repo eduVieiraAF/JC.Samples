@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
+import com.example.jc.samples.SimpleAnimation
 import com.example.jc.ui.theme.JCTheme
 
 class MainActivity : ComponentActivity() {
@@ -16,10 +17,10 @@ class MainActivity : ComponentActivity() {
             JCTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
-                    modifier = Modifier.fillMaxSize(),
+                    //modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-
+                    SimpleAnimation()
                 }
             }
         }
