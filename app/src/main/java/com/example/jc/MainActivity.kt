@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
+import com.example.jc.samples.Volume
 import com.example.jc.ui.theme.JCTheme
 
 class MainActivity : ComponentActivity() {
@@ -17,7 +18,6 @@ class MainActivity : ComponentActivity() {
                     //modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-
                 }
             }
         }
