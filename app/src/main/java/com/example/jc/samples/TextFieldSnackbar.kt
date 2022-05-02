@@ -55,13 +55,13 @@ fun ClickText() {
                         scaffoldState.snackbarHostState
                             .showSnackbar("Hello $textFieldState")
                     }
+                    keyboardController?.hide()
                 },
                 colors = ButtonDefaults
                     .buttonColors(
                         backgroundColor = MaterialTheme.colors.error,
                         contentColor = Color.White
                     )
-
             ) {
                 Text("Click me")
             }
